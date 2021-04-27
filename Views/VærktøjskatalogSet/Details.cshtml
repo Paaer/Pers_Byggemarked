@@ -1,0 +1,42 @@
+﻿@model ClassLibrary_Byggemarked.VærktøjskatalogSet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VærktøjskatalogSet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Beskrivelse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Beskrivelse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Depositum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Depositum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Døgnpris)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Døgnpris)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Navn }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

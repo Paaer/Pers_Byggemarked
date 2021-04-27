@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ClassLibrary_Byggemarked.VærktøjskatalogSet>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Liste over værktøjer</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Navn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Beskrivelse)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Depositum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Døgnpris)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <th>
+            @Html.DisplayFor(modelItem => item.Navn)
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.Beskrivelse)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Depositum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Døgnpris)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Navn }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Navn }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Navn })
+        </td>
+    </tr>
+}
+
+</table>

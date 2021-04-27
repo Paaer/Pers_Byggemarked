@@ -1,0 +1,50 @@
+﻿@model ClassLibrary_Byggemarked.KundeSet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>KundeSet</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Adresse)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Adresse)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Navn)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Navn)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Password)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Password)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Email }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
